@@ -12,16 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :yapılacak %>
+    <% form.label :yapılacak %>
     <%= form.text_field :description %>
   </div>
 
-  <div class="field">
-    <%= form.label "Bitti mi?" %>
-    <%= form.check_box :completed %>
-  </div>
 
   <div class="actions">
-    <%= form.submit "Yapılacağı Güncelle" %>
+    <%= form.submit "Yapılacak Ekle" %>
   </div>
 <% end %>
