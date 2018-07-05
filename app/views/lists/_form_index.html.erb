@@ -11,13 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <% form.label :yapılacak %>
-    <%= form.text_field :description %>
+  <div class="form-group">
+  Yapılacak ekle</br/>
+    <% form.label :yapılacak %> <br>
+    <%= form.text_field :description, class: "form-control" %>
   </div>
 
 
-  <div class="actions">
+  <div class="actions form-group">
     <%= form.submit "Yapılacak Ekle" %>
   </div>
 <% end %>
