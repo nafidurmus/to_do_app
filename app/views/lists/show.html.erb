@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Yapılacak:</strong>
   <%= @list.description %>
 </p>
 
 <p>
-  <strong>Completed:</strong>
+  <strong>Bitti mi?:</strong>
   <%= @list.completed %>
 </p>
 
-<%= link_to 'Edit', edit_list_path(@list) %> |
-<%= link_to 'Back', lists_path %>
+<%= link_to 'Düzenle', edit_list_path(@list) %> |
+<%= link_to 'Geri', lists_path %>
