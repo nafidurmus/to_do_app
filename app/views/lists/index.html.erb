@@ -6,20 +6,32 @@
   <thead>
     <tr>
       <th>Yapılacaklar</th>
-      <th>Bitti mi?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
-  <tbody>
+  <body>
     <% @lists.each do |list| %>
-      <tr>
+      <% if list.completed %>
+      <tr class="table-success">
         <td><%= list.description %></td>
-        <td><%= list.completed %></td>
-        <td><%= link_to 'Göster', list %></td>
-        <td><%= link_to 'Düzenle', edit_list_path(list) %></td>
-        <td><%= link_to 'Sil', list, method: :delete, data: { confirm: 'Emin misin?' } %></td>
+        <td>
+          <%= link_to 'Göster', list %>
+          <%= link_to 'Düzenle', edit_list_path(list) %>
+          <%= link_to 'Sil', list, method: :delete, data: { confirm: 'Emin misin?' } %>
+        </td>
       </tr>
+      <% else %>
+        <tr>
+          <td><%= list.description %></td>
+          <td>
+            <%= link_to 'Göster', list %>
+            <%= link_to 'Düzenle', edit_list_path(list) %>
+            <%= link_to 'Sil', list, method: :delete, data: { confirm: 'Emin misin?' } %> 
+          </td>
+        </tr>
+
+      <% end %>
     <% end %>
   </tbody>
 </table>
