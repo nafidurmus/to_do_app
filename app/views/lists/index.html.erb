@@ -20,7 +20,7 @@
           </td>
           <td>
             <% link_to 'Göster', list %>
-            <center><%= link_to 'Sil', list, class: 'btn btn-danger', method: :delete, data: { confirm: 'Emin misin?', class: 'btn btn-light' } %></center>
+            <center><%= link_to 'Sil', list, class: 'btn btn-dark', method: :delete, data: { confirm: 'Emin misin?', class: 'btn btn-light' } %></center>
           </td>
         </tr>
       <% else %>
@@ -35,7 +35,7 @@
           </td>
           <td>
             <% link_to 'Göster', list %>
-            <center><%= link_to 'Sil', list, class: 'btn btn-danger', method: :delete, data: { confirm: 'Emin misin?', class: 'btn btn-light' } %></center>
+            <center><%= link_to 'Sil', list, class: 'btn btn-dark', method: :delete, data: { confirm: 'Emin misin?', class: 'btn btn-light' } %></center>
           </td>
         </tr>
 
@@ -51,6 +51,6 @@
 
 
 
-<%= link_to 'Yapılmış olanları Sil', home_trash_em_path, data: { confirm: 'Emin misin?' } %> |
+<%= link_to 'Yapılmış olanları Sil', home_trash_path, class: 'btn btn-warning btn-lg float-left', data: { confirm: 'Emin misin?' } %> 
 
-<%= link_to 'Hepsini Sil', home_trash_em_all_path, data: { confirm: 'Emin misin?' } %>
+<%= link_to 'Hepsini Sil', home_trash_all_path, class: 'btn btn-danger btn-lg float-right', data: { confirm: 'Emin misin?'} %>
