@@ -12,16 +12,30 @@
         <tr class="bg-light">
           <td class="striker"><%= link_to list.description, edit_list_path(list) %><% list.description %></td>
           <td>
+            <%= form_with(model: list, local: true) do |form| %>
+              <%= form.text_field :description, type: 'hidden' %>
+              <%= form.check_box :completed, :checked => false, :style => 'visibility: hidden' %>
+              <%= form.submit "Bitmedi", class: 'btn btn-info' %>
+            <% end %>
+          </td>
+          <td>
             <% link_to 'Göster', list %>
-            <center><%= link_to 'Sil', list, class: 'btn btn-light', method: :delete, data: { confirm: 'Emin misin?', class: 'btn btn-light' } %></center>
+            <center><%= link_to 'Sil', list, class: 'btn btn-danger', method: :delete, data: { confirm: 'Emin misin?', class: 'btn btn-light' } %></center>
           </td>
         </tr>
       <% else %>
         <tr>
           <td><%= link_to list.description, edit_list_path(list) %><% list.description %></td>
           <td>
+            <%= form_with(model: list, local: true) do |form| %>
+              <%= form.text_field :description, type: 'hidden' %>
+              <%= form.check_box :completed, :checked => true, :style => 'visibility: hidden' %>
+              <%= form.submit "Bitti", class: 'btn btn-info' %>
+            <% end %>
+          </td>
+          <td>
             <% link_to 'Göster', list %>
-            <center><%= link_to 'Sil', list, class: 'btn btn-light', method: :delete, data: { confirm: 'Emin misin?', class: 'btn btn-light' } %></center>
+            <center><%= link_to 'Sil', list, class: 'btn btn-danger', method: :delete, data: { confirm: 'Emin misin?', class: 'btn btn-light' } %></center>
           </td>
         </tr>
 
