@@ -11,14 +11,8 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-  Yapılacak ekle</br/>
-    <% form.label :yapılacak %> <br>
-    <%= form.text_field :description, class: "form-control" %>
-  </div>
-
-
-  <div class="actions form-group">
-    <%= form.submit "Yapılacak Ekle" %>
+  <div class="form-inline my-2 my-lg-0">
+    <%= form.text_field :description, class: "fform-control mr-sm-2" %>
+    <%= form.submit "Yapılacak Ekle", class: "btn btn-outline-success my-2 my-sm-0" %>
   </div>
 <% end %>
