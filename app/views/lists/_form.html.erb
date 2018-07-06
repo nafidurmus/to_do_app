@@ -11,17 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :yapılacak %>
-    <%= form.text_field :description %>
+  <div class="form-group">
+    <%= form.text_field :description, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label "Bitti mi?" %>
-    <%= form.check_box :completed %>
+    <%= form.check_box :completed, class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= form.submit "Yapılacağı Güncelle" %>
+    <%= form.submit "Yapılacağı Güncelle", class: 'btn btn-info' %>
   </div>
 <% end %>

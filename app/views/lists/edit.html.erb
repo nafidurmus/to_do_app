@@ -1,6 +1,14 @@
-<h1>Yapılacağı Düzenle</h1>
+<center>
+	<h1>Yapılacağı Düzenle</h1>
+	<br/>
+	<div class="card" style="width: 50rem;">
+	  <div class="card-body">
+	   <%= render 'form', list: @list %>
+	  </div>
+	</div>
 
-<%= render 'form', list: @list %>
+	<br></br>
 
-<%= link_to 'Göster', @list %> |
-<%= link_to 'Geri', lists_path %>
+	<% link_to 'Göster', @list %> 
+	<%= link_to 'Geri', lists_path %>
+</center>
